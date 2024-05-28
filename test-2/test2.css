@@ -1,0 +1,282 @@
+:root {
+  --bg-color: rgb(10, 10, 10);
+  --canvas: max(10px, 3vmin);
+  --big-font:max(4vw, 30px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  line-height: 1;
+  box-sizing: border-box;
+  letter-spacing: 3px;
+}
+
+body {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  overscroll-behavior: none;
+  background-color: var(--bg-color);
+  font-family:"Sulphur Point", sans-serif;
+  color: white;
+}
+
+#background {
+  position: fixed;
+  top: var(--canvas);
+  left: var(--canvas);
+  bottom: var(--canvas);
+  right: var(--canvas);
+  background-color: var(--bg-color);
+  overflow: hidden;
+  z-index: 1;
+}
+
+#foreground {
+  position: fixed;
+  top: var(--canvas);
+  left: var(--canvas);
+  bottom: var(--canvas);
+  right: var(--canvas);
+  border: 1px solid white;
+  z-index: 2;
+}
+
+.hover-effect {
+  transition: opacity 500ms ease-in-out;
+}
+
+.hover-effect:hover {
+  opacity: .1;
+}
+
+#header {
+  z-index: 4;
+  position: fixed;
+  top: calc(var(--canvas) * 4);
+  left: calc(var(--canvas) * 4);
+}
+
+#name {
+  font-size: var(--big-font);
+  font-weight: 300;
+}
+
+#title {
+  font-size: 18px;
+}
+
+#nav {
+  z-index: 3;
+  position: absolute;
+  margin-top: 80px;
+  font-size: 18px;
+}
+
+#nav:hover > .nav-items {
+  opacity: .1;
+}
+
+#nav > .nav-items:hover {
+  opacity: 1;
+}
+
+.nav-items {
+  margin-top: 15px;
+  display: table;
+  transition: opacity 500ms ease-in-out;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: white;
+}
+
+#main-content {
+  position: fixed;
+  top: var(--canvas);
+  left: var(--canvas);
+  bottom: var(--canvas);
+  right: var(--canvas);
+  overflow: hidden;
+  z-index: 3;
+}
+
+#home-content {
+  position: fixed;
+  bottom: calc(100vh * .10);
+  right: calc(100vw * .10);
+  font-weight: 100;
+  transition: opacity 1000ms ease-in-out;
+  letter-spacing: 0px; 
+}
+
+#home-content[data-show="yes"] {
+  z-index: 10;
+  opacity: 1;
+}
+
+#home-content[data-show="no"] {
+  z-index: 0;
+  opacity: 0;
+}
+
+#home-content h2 {
+  font-size: min(5.5vw, 50px);
+  font-weight: 300;
+}
+
+#home-content p {
+  opacity: .5;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  font-size: min(4vw, 30px);
+  margin-left: 1px;
+}
+
+#projects-content {
+  position: fixed;
+  top: 25vh;
+  right: calc(var(--canvas) * 6);
+  bottom: var(--canvas);
+  font-weight: 100;
+  transition: opacity 500ms ease-in-out;
+  letter-spacing: 0px; 
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#projects-content::-webkit-scollbar {
+  display: none;
+}
+
+#projects-content[data-show="yes"] {
+  z-index: 10;
+  opacity: 1;
+}
+
+#projects-content[data-show="no"] {
+  z-index: 0;
+  opacity: 0;
+}
+
+
+.project-item {
+  margin-bottom: 50px
+}
+
+.project-item a {
+  text-decoration: none;
+  color: white;
+}
+
+.project-item h2{
+  font-size: min(4vw, 50px);
+  font-weight: 500;
+}
+
+.project-item p{
+  margin-left: 2px;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 100;
+  opacity: .7;
+}
+
+#info-content {
+  position: fixed;
+  top: 35vh;
+  left: calc(var(--canvas) * 14 );
+  bottom: var(--canvas);
+  right: calc(var(--canvas) * 5 );
+  transition: opacity 500ms ease-in-out;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#info-content[data-show="yes"] {
+  z-index: 10;
+  opacity: 1;
+}
+
+#info-content[data-show="no"] {
+  z-index: 0;
+  opacity: 0;
+}
+
+#info-content::-webkit-scollbar {
+  display: none;
+}
+
+
+#info-content p{
+  opacity: 0.7;
+  font-weight: 100;
+  line-height: 30px;
+  letter-spacing: 2px;
+  font-size: 18px;
+  margin-bottom: 8cqb;
+}
+
+#info-content h2{
+  letter-spacing: 2px;
+  margin-bottom: 80px;
+  font-weight: 100;
+  font-size: min(8vw, 80px);
+}
+
+#contact-content {
+  /* border: 1px solid white; */
+  position: fixed;
+  top: 50vh;
+  left:  15vw;
+  bottom: calc(var(--canvas) * 2);
+  right: 15vw;
+  transition: opacity 500ms ease-in-out;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#contact-content[data-show="yes"] {
+  z-index: 10;
+  opacity: 1;
+}
+
+#contact-content[data-show="no"] {
+  z-index: 0;
+  opacity: 0;
+}
+
+.contact-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.contact-link p {
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-top: 5px;
+}

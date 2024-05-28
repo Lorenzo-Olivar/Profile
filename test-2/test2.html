@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./page-reset.css">
+    <link rel="stylesheet" href="test2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/589242b0e4.js" crossorigin="anonymous"></script>
+    <title>Lorenzo Olivar</title>
+</head>
+
+<body>
+    <div id="background"></div>
+    <div id="foreground"></div>
+    <header id="header">
+        <h1 id="name">Lorenzo Olivar</h1>
+        <p id="title">Front End Developer</p>
+        <ul id="nav">
+            <li class="nav-items" onclick="showHome()">
+                <a href="#">Home</a>
+            </li>
+            <li class="nav-items" onclick="showProjects()">
+                <a href="#">Projects</a>
+            </li>
+            <li class="nav-items" onclick="showInfo()">
+                <a href="#">Info</a>
+            </li>
+            <li class="nav-items" onclick="showContact()">
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <main id="main-content">
+        <section class="content-item" id="home-content" data-show="yes">
+
+            <h2>Hey. It's nice to meet you.</h2>
+            <p>
+                Feel free to look around. <br>
+                Maybe you'll see something <br>
+                if you look close enough
+            </p>
+        </section>
+        <section class="content-item" id="projects-content" data-show="no">
+            <ol id="project-list">
+                <li class="project-item hover-effect">
+                    <a href="#">
+                        <h2>Art of Nothing Yet</h2>
+                        <p>2024</p>
+                    </a>
+                </li>
+                <li class="project-item hover-effect">
+                    <a href="#">
+                        <h2>Blank is the Title</h2>
+                        <p>After 2024</p>
+                    </a>
+                </li>
+                <li class="project-item hover-effect">
+                    <a href="#">
+                        <h2>For Future Zo to Work On</h2>
+                        <p>Soon After 2024</p>
+                    </a>
+                </li>
+                <li class="project-item hover-effect">
+                    <a href="#">
+                        <h2>Title Goes Here Eventually</h2>
+                        <p>Soon Soon After 2024</p>
+                    </a>
+                </li>
+            </ol>
+        </section>
+        <section class="content-item" id="info-content" data-show="no">
+            <p>
+                Hey again! Thanks for taking a look into my portfolio.
+                Since you're here, let me reintroduce myself.
+                My friends and family call me...
+            </p>
+            <a href="../images/Lorenzo Olivar Front End Developer Resume - Google Docs.pdf" target="_blank"
+                style="color: #ffffff; text-decoration: none;">
+                <h2 class="hover-effect">
+                    Zo
+                </h2>
+            </a>
+            <p style="font-size: 12px;">
+                ~ click my name for my resume ~
+            </p>
+            <p>
+                After graduating with my associates degree in 2023, I made the life-changing decision to attend a
+                Full-Stack web development course at UC Berkeley! Graduating in early 2024, I now
+                code as a Front-End web developer, eager to create any and all works of art!
+            </p>
+            <p>
+                Currently, my favorite thing to do as a front-end developer, is venturing through masterfully created
+                websites by my fellow colleagues! There are so many times that I've been left speechless thinking to
+                myself ~ HOW DID THEY DO THIS ~ and ~ HOW CAN I DO THAT ~ that I immediately try to reproduce whatever
+                it is that has inspired me. As a result, I code out of obsession towards my inspiration and to the
+                practice of coding itself! Hence why I created my portfolio page.
+            </p>
+            <p style="font-size: 12px;"> Much
+                credit to
+                <a href="https://p5aholic.me/" target="_blank"
+                    style="text-decoration: none; font-weight: 600; color: white;" class="hover-effect">Keita
+                    Yamada</a> for being the
+                inspiration of this little project of mine. ~ Click his name for his portfolio ~
+            </p>
+            <p>
+                Despite my drive and dedication towards expanding my skills, I often long to be apart of a team
+                dedicated towards coding ideas into life! So hopefully soon, and through my portfolio page, I'll get to
+                be apart of something amazing!
+            </p>
+            <p>
+                Once again, I'm Zo Olivar and I thank you for learning a bit about me. If you would like to chat about
+                anything code or anything other... follow me to my <span onclick="showContact()"
+                    style="cursor: pointer; font-weight: 600; color: white;" class="hover-effect">contact page</span>
+            </p>
+        </section>
+        <section class="content-item" id="contact-content" data-show="no">
+            <a href="mailto:lorenzo.j.olivar@gmail.com" class="contact-link">
+                <i class="fa-solid fa-envelope" style="color: #ffffff; font-size: 10vmin;"></i>
+                <p>Email Me</p>
+            </a>
+            <a href="https://github.com/Lorenzo-Olivar" target="_blank" class="contact-link">
+                <i class="fa-brands fa-github" style="color: #ffffff; font-size: 10vmin; margin-bottom: 2px;"></i>
+                <p>My GitHub</p>
+            </a>
+        </section>
+    </main>
+    <script src="./test2.js"></script>
+</body>
+
+</html>
