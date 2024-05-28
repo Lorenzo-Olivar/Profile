@@ -236,7 +236,7 @@ body {
 
 #info-content h2{
   letter-spacing: 2px;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   font-weight: 100;
   font-size: min(8vw, 80px);
 }
